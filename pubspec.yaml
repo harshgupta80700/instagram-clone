@@ -46,6 +46,7 @@ flutter:
   - assets/deadpool.jpg
   - assets/deadpool2.png
   - assets/deadpool3.png
+  - assets/new image.jpg
   #  - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

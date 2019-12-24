@@ -41,47 +41,12 @@ class First extends StatelessWidget{
           child: Column(
             children: <Widget>[
              Story(),
-              Divider(height: 30.0,),
-              Row(
-                    children: <Widget>[
-                      Container(
-                        margin: EdgeInsets.fromLTRB(17.0, 0.0, 10.0, 5.0),
-                        height: 35.0,
-                        width: 35.0,
-                        child:Image.asset("assets/deadpool2.png")
-                      ),
-                       Text("deadpool_12345",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 16.5,
-                        ),
-                      ),
-                      IconButton(
-                        alignment: Alignment.centerRight,
-                        onPressed: (){},
-                        
-                        icon: Icon(
-                          
-                          Icons.more_vert,
-                          color: Colors.black,
-                          
-                        )
-                        
-                      )
-                                     
-                    ],
-              ),
-              Divider(height: 10.0,),
-              Row(
-                children: <Widget>[
-                  Container(
-                   
-                    height: 200.0,
-                    width: 500.0,
-                    child: Image.asset("assets/deadpool.jpg"),
-                  ),
-                ],
-              )
+              //Divider(height: 30.0,),
+               
+              Mainpage(),
+              Mainpage(),
+              Mainpage(),
+             
               
               
             ],
@@ -95,3 +60,106 @@ class First extends StatelessWidget{
   }
 
 }
+
+
+class Mainpage extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: <Widget>[
+        Divider(height: 30.0),
+          Row(
+                  
+                   children: <Widget>[
+                     Row(
+                       children: <Widget>[
+                          Container(
+                        margin: EdgeInsets.fromLTRB(17.0, 0.0, 10.0, 5.0),
+                        height: 35.0,
+                        width: 35.0,
+                        child:Image.asset("assets/deadpool2.png")
+                      ),
+                       Text("deadpool_12345",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16.5,
+                        ),
+                      ),
+                     
+                       ],
+                     ),
+                      
+                      
+                       
+                         IconButton(
+                        
+                        onPressed: (){},
+                        
+                        icon: Icon(
+                          
+                          Icons.more_vert,
+                          color: Colors.black,
+                          
+                        )
+                        
+                      )
+                                     
+                       
+                     
+                      
+                    ],
+              ),
+              
+              
+              Divider(height: 10.0,),
+              Row(
+                children: <Widget>[
+                  Container(
+                   
+                      width: MediaQuery.of(context).size.width,
+                      height: MediaQuery.of(context).size.width,
+                    child: Image.asset("assets/deadpool.jpg"),
+                  ),
+                ],
+              ),
+               Row(
+                children: <Widget>[
+                  IconButton(
+                    onPressed: (){},
+                    icon: Icon(
+                      Icons.favorite_border,
+                      color: Colors.black,
+                      
+                    ),
+                  ),
+                  IconButton(
+                    onPressed: (){},
+                    icon: Icon(
+                      Icons.loupe,
+                      color: Colors.black,
+                    ),
+                  ),
+                  IconButton(
+                    onPressed: (){},
+                    icon: Icon(
+                      Icons.near_me,
+                      color: Colors.black,
+                      
+                    ),
+                  ),
+                  IconButton(
+                    onPressed: (){},
+                    alignment: Alignment.centerRight,
+                    icon: Icon(
+                      Icons.bookmark_border,
+                      color:  Colors.black,
+        
+  
+                    )
+                  ),
+                  Divider(height: 20.0,)
+                ],
+              ),
+      ],
+    );
+  }} 

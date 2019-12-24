@@ -64,7 +64,12 @@ class Story extends StatelessWidget{
                     margin: EdgeInsets.fromLTRB(8.5, 10.0, 8.5, 5.0),
                     height: 65.0,
                     width: 65.0,
-                    child: Image.asset("assets/deadpool2.png"),
+                    decoration: new BoxDecoration(
+                      shape: BoxShape.circle,
+                      
+                    ),
+                    child: Image.asset("assets/deadpool.png",
+                    ),
                   ),
                   Container(
                     margin: EdgeInsets.fromLTRB(8.5, 10.0, 8.5, 5.0),
