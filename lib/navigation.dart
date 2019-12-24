@@ -69,7 +69,7 @@ class Story extends StatelessWidget{
                       
                     ),
                     child: Image.asset("assets/deadpool.png",
-                    ),
+                    fit: BoxFit.fill,),
                   ),
                   Container(
                     margin: EdgeInsets.fromLTRB(8.5, 10.0, 8.5, 5.0),
