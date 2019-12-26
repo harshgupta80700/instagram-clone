@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import './navigation.dart';
+import './dm.dart';
 
 class First extends StatelessWidget{
   @override
@@ -15,7 +16,7 @@ class First extends StatelessWidget{
             Icons.camera_alt,
             color: Colors.black,
           )),
-          //titleSpacing: 0.0,
+          
           actions: <Widget>[
             IconButton(
               onPressed: (){},
@@ -26,24 +27,29 @@ class First extends StatelessWidget{
             ),
             IconButton(
               onPressed: (){
-                
+                Navigator.push(context,MaterialPageRoute(
+                  builder: (context)=> Direct()
+                ) );
               },
               icon: Icon(
                 Icons.near_me,
+                
                 color: Colors.black,
               ),
             ),
           ],
           title: Padding(
-            padding: EdgeInsets.fromLTRB(0.0, 10.0, 5.0, 4.0) ,
+            padding: EdgeInsets.fromLTRB(0.0, 15.0, 10.0, 4.0) ,
             child: Image.asset('assets/instagram.png'),
           )  
+
+          
         ),
         body: SingleChildScrollView(
           child: Column(
             children: <Widget>[
              Story(),
-              //Divider(height: 30.0,),
+              
                
               Mainpage(),
               Mainpage(),
@@ -53,10 +59,10 @@ class First extends StatelessWidget{
               
             ],
           ),
-          scrollDirection: Axis.horizontal,
+          
           
         ),
-        bottomNavigationBar: Harsh(),
+        bottomNavigationBar: Button(),
       ),
     );
   }
@@ -70,7 +76,9 @@ class Mainpage extends StatelessWidget{
     return Column(
       children: <Widget>[
         Divider(height: 30.0),
-          Row(
+          Container(
+            width: MediaQuery.of(context).size.width,
+            child: Row(
                   
                    children: <Widget>[
                      Row(
@@ -118,6 +126,7 @@ class Mainpage extends StatelessWidget{
                       
                     ],
               ),
+          ),
               
               
               Divider(height: 10.0,),
@@ -131,7 +140,9 @@ class Mainpage extends StatelessWidget{
                   ),
                 ],
               ),
-               Row(
+               Container(
+                 width: MediaQuery.of(context).size.width,
+                 child: Row(
                 children: <Widget>[
                   IconButton(
                     onPressed: (){},
@@ -178,7 +189,12 @@ class Mainpage extends StatelessWidget{
                   Divider(height: 20.0,)
                 ],
               ),
+               ),
+               
       ],
     );
   }
 } 
+
+
+

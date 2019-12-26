@@ -1,15 +1,39 @@
 import 'package:flutter/material.dart';
 
-class Harsh extends StatelessWidget{
+
+class Button extends StatefulWidget{
+  @override
+  State<StatefulWidget> createState() {
+    
+    return Harsh();
+  }
+  
+}
+
+
+
+class Harsh extends State<Button>{
+  int _currentindex=0;
+  
   @override
   Widget build(BuildContext context) {
     
-    return BottomNavigationBar(
+    return 
+    BottomNavigationBar(
+      currentIndex: _currentindex ,
+      onTap: (value){
+        _currentindex=value;
+        setState(() {
+          
+        });
+      },
+      
       items: [
+        
         BottomNavigationBarItem(
               icon: Icon(Icons.home,
               color: Colors.black),
-              backgroundColor: Colors.white,
+             
               title: Text("home",
               style: TextStyle(
                 color: Colors.black
@@ -18,7 +42,7 @@ class Harsh extends StatelessWidget{
             BottomNavigationBarItem(
               icon: Icon(Icons.search,
               color: Colors.black),
-              backgroundColor: Colors.white,
+             
               title: Text("search"),
             ),
             BottomNavigationBarItem(
@@ -39,6 +63,12 @@ class Harsh extends StatelessWidget{
               backgroundColor: Colors.white,
               title: Text("profile"),
             ),
+            
+            
+              
+              
+              
+              
       ],
     );
   }
