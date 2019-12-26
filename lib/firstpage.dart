@@ -62,12 +62,14 @@ class First extends StatelessWidget{
           
           
         ),
-        bottomNavigationBar: Button(),
+        //bottomNavigationBar: Button(),
       ),
     );
   }
 
 }
+
+
 
 
 class Mainpage extends StatelessWidget{

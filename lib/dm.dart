@@ -58,35 +58,7 @@ class Direct extends StatelessWidget{
            ),
             
             Divider(height: 20.0,),
-            Container(
-              width: MediaQuery.of(context).size.width,
-              child: Expanded(
-                 child:  ListView(
-                    padding: EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 5.0),
-                        children: <Widget>[
-              
-               ListTile(
-                  leading: Container(
-                    margin: EdgeInsets.fromLTRB(15.0, 7.0, 10.0, 5.0),
-                  height: 60.0,
-                  width: 60.0,
-                  
-                  decoration: new BoxDecoration(
-                    shape: BoxShape.circle,
-                    image: new DecorationImage(
-                      image: new ExactAssetImage("assets/deadpool.jpg",),
-                      fit: BoxFit.fill
-                    
-                    )
-                  ),
-                  ),
-                  title: Text("xyz"),
-                  subtitle: Text("abc"),
-                )
-              ],
-            ) ,
-            ), 
-              )
+           
             
               
             

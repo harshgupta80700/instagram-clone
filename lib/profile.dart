@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:instagram_clone/navigation.dart';
+import './navigation.dart';
+
+
 
 
 class Profile extends StatelessWidget{
@@ -11,7 +13,9 @@ class Profile extends StatelessWidget{
         backgroundColor: Colors.white,
         leading: IconButton(
           onPressed: (){
-            Navigator.pop(context);
+            Navigator.push(context, MaterialPageRoute(
+              builder: (context) => Mainclass()
+            ));
             },
           icon: Icon(
             Icons.arrow_back,
@@ -72,7 +76,7 @@ class Profile extends StatelessWidget{
          
         ],
       ),
-      bottomNavigationBar: Button(),
+      //bottomNavigationBar: Button(),
     );
   }
 
