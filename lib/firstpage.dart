@@ -53,7 +53,7 @@ class First extends StatelessWidget{
               
             ],
           ),
-          scrollDirection: Axis.vertical,
+          scrollDirection: Axis.horizontal,
           
         ),
         bottomNavigationBar: Harsh(),
@@ -91,9 +91,11 @@ class Mainpage extends StatelessWidget{
                        ],
                      ),
                       
-                      
-                       
-                         IconButton(
+                      Expanded(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: <Widget>[
+                            IconButton(
                         
                         onPressed: (){},
                         
@@ -105,7 +107,12 @@ class Mainpage extends StatelessWidget{
                         )
                         
                       )
-                                     
+                                    
+                          ],
+                        ),
+                      )
+                       
+                          
                        
                      
                       
@@ -149,7 +156,11 @@ class Mainpage extends StatelessWidget{
                       
                     ),
                   ),
-                  IconButton(
+                   Expanded(
+                     child: Row(
+                       mainAxisAlignment: MainAxisAlignment.end,
+                       children: <Widget>[
+                         IconButton(
                     onPressed: (){},
                     alignment: Alignment.centerRight,
                     icon: Icon(
@@ -159,6 +170,11 @@ class Mainpage extends StatelessWidget{
   
                     )
                   ),
+                       ],
+                     ),
+                   ),
+                       
+                  
                   Divider(height: 20.0,)
                 ],
               ),
