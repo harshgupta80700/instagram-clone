@@ -1,17 +1,30 @@
 import 'package:flutter/material.dart';
-import './navigation.dart';
+import 'package:instagram_clone/login.dart';
 
 
+import 'navigation.dart';
 
-void main() => runApp(MyApp());
+
+void main() => runApp(MyApp2());
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Login()
+      
+      
+    );
+  }
+}
+class MyApp2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Mainclass()
+      
     );
   }
 }
